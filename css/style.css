@@ -45,7 +45,7 @@ a {
 
 .submenu0 li {
     color: #8D8D8D;
-    padding-right: 62px;
+    padding-right: 35px;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 100%;
@@ -96,16 +96,17 @@ a {
 }
 
 .menunike img {
-    width: 100px;
-    margin-top: -15px;
+    width: 85px;
+    margin-top: -20px;
     max-width: 100%;
+    margin-left: 15px;
 
 }
 
 .submenu {
     display: flex;
     justify-content: space-between;
-    margin-left: 135px;
+    margin-left: 230px;
     max-width: 100%;
 
 
@@ -114,13 +115,16 @@ a {
 .submenu li {
     color: #111111;
     display: flex;
-    padding-right: 30px;
-    font-size: 15px;
+    padding-right: 35px;
+    font-size: 12px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
     max-width: 100%;
+    
 
 }
+
+
 
 
 .menupesquisa {
@@ -133,6 +137,7 @@ a {
     border-radius: 3px;
     border-color: #8D8D8D;
     max-width: 100%;
+    margin-top: -10px;
 }
 
 
@@ -156,7 +161,7 @@ a {
 
 .seta {
 
-    transform: translateX(35%);
+    transform: translateX(30%);
     width: 757px;
     height: 30px;
     max-width: 100%;
@@ -250,10 +255,23 @@ a {
     
 }
 
+.fotomobile{
+    display: none;
+}
+
+.foto img{
+    
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    
+    margin-top: 0px;
+    
+}
 
 
-
-@media(max-width:768px) { 
+@media(max-width:360px) { 
 
     .menumobile {
     
@@ -267,14 +285,16 @@ a {
 
     
     position: relative;
-    top: -60px;
+    top: -130px;
     left: 550px;
     width: 500px;
         
         
     }
     .logo img{
-        width: 125px;
+        width: 300px;
+        margin-left: -150px;
+        
         
     }
 
@@ -283,19 +303,19 @@ a {
         
         position: absolute;
     top: 0px;
-    left: 1125px;
+    left: 985px;
         
         margin-top: 20px;
         
     }
 
     .carrinho img{
-        width: 30px;
+        width: 100px;
         
     }
 
     label{
-        font-size: 45px;
+        font-size: 100px;
         margin-left: 20px;
         
     }
@@ -309,15 +329,18 @@ a {
     .menupesquisamob {
         display: flex;
         border: solid;
-        height: 40px;
+        height: 100px;
         margin-top: -60px;
+      
         
         margin-left: 25px;
         padding: 8px;
         border-width: 1px;
         border-radius: 3px;
         border-color: #8D8D8D;
-        width: 1120px;
+        width: 1050px;
+        
+        margin-top: -120px;
         
         
     }
@@ -328,20 +351,21 @@ a {
     .menupesquisamob img {
     
         margin-left: 15px;
-        width: 17px;
-        height: 17px;
+        width: 40px;
+        height: 40px;
         max-width: 100%;
-        margin-top: 10px;
+        margin-top: 35px;
     }
     
     .menupesquisamob input {
     
-        height: 17px;
-        margin-left: 12px;
+        
+        margin-left: 60px;
         border: none !important;
         max-width: 100%;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 40px;
+        
     
     }
     
@@ -372,9 +396,10 @@ a {
 .submenuseta{
 
     background-color: black;
-    width: 1200px;
-    height: 70px;
-    margin-left: -280px;
+    width: 1280px;
+    height: 160px;
+    margin-left: -290px;
+    margin-top: 15px;
     
 
 }
@@ -384,14 +409,14 @@ a {
 }
 .submenu3 {
     
-    font-size: 20px;
+    font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color: #ffffff;
-    width: 450px;
+    width: 600px;
     height: 100px;
    
-    margin-left: 150px;
+    margin-left: 70px;
     margin-top: 20px;
     
     
@@ -402,29 +427,33 @@ a {
 
 .setaesquerda  {
 
-    width: 30px;
+    width: 0px;
     
     
-    font-size: 30px;
+    font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color:#ffffff;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 200px;
+    
 }
 
 .setadireita {
 
     width: 10px;
     
-    font-size: 30px;
+    font-size: 70px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color: #ffffff;
-    margin-left: 120px;
-    margin-top: 20px;
+    margin-left: -30px;
+    margin-top: 40px;
 }
 
-.foto {
+.fotomobile {
+
+    
 
     display: table;
   width: 100%;
@@ -436,18 +465,35 @@ a {
   
  
  }
+
+
+ .foto img{
+
+    
+
+    display: none;
+ 
+ 
+ }
+
+ .fotomobile img{
+
+    
+
+    display: table;
+  width: 100%;
+  height: 100%;
+  width: 1000px;
+  text-align: center;
+  
+  margin-top: 180px;
+  
+ 
+ }
+ 
  
  .semana {
-    font-size: 18px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(3, 3, 3);
-    padding: 20px;
-    margin-top: -65px;
-    
-    height: 15px;
-    text-align: center;
-    
-    width: 900px;
+    display: none;
     
 
     
