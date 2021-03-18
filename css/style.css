@@ -19,7 +19,7 @@ a {
 
 
 .menumobile {
-    
+
     display: none;
 }
 
@@ -88,9 +88,9 @@ a {
     display: flex;
     justify-content: space-between;
     padding-top: 18px;
-    margin-left:10 px;
+    margin-left: 10 px;
     width: 100%;
-   
+
     max-width: 100%;
     max-width: 100%;
 }
@@ -116,11 +116,11 @@ a {
     color: #111111;
     display: flex;
     padding-right: 35px;
-    font-size: 12px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: none;
     max-width: 100%;
-    
+
 
 }
 
@@ -183,22 +183,23 @@ a {
 
     padding-top: 5px;
 }
+
 .foto {
 
-   padding: 40px;
+    padding: 40px;
 
 }
 
 .foto img {
 
-    width:100%;
-    
+    width: 100%;
+
 
 }
 
 
 
-.setaesquerda  {
+.setaesquerda {
 
     width: 10px;
     margin-left: 50px;
@@ -207,7 +208,7 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     color: #080808;
-    
+
 }
 
 .frete {
@@ -224,7 +225,7 @@ a {
 .frete img {
 
     width: 37px;
-    
+
 }
 
 .setadireita {
@@ -243,87 +244,95 @@ a {
 
 .semana {
     font-size: 24px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(3, 3, 3);
     padding: 20px;
     margin-top: -65px;
-    margin-left: 172px;
+    margin-left: 20px;
     height: 15px;
     text-align: center;
-    
 
-    
+
+
 }
 
-.fotomobile{
+.fotomobile {
     display: none;
 }
 
-.foto img{
-    
+.foto img {
+
     width: 100%;
     height: 100%;
-    
+
     text-align: center;
-    
+
     margin-top: 0px;
-    
+
+
+
+}
+
+.setamobi{
+
+    display: none;
 }
 
 
-@media(max-width:360px) { 
+@media(max-width:360px) {
 
     .menumobile {
-    
+
         display: block;
-        
-        
+
+
 
     }
 
     .logo {
 
-    
-    position: relative;
-    top: -130px;
-    left: 550px;
-    width: 500px;
-        
-        
+
+        position: relative;
+        top: -130px;
+        left: 550px;
+        width: 500px;
+
+
     }
-    .logo img{
+
+    .logo img {
         width: 300px;
         margin-left: -150px;
-        
-        
+
+
     }
 
     .carrinho {
 
-        
+
         position: absolute;
-    top: 0px;
-    left: 985px;
-        
+        top: 0px;
+        left: 950px;
+
         margin-top: 20px;
-        
+
     }
 
-    .carrinho img{
+    .carrinho img {
         width: 100px;
-        
+
     }
 
-    label{
+    label {
         font-size: 100px;
-        margin-left: 20px;
-        
+        margin-left: 40px;
+
     }
 
-    .menupesquisamob{
+    .menupesquisamob {
         display: block;
-        
-        
+
+
     }
 
     .menupesquisamob {
@@ -331,180 +340,224 @@ a {
         border: solid;
         height: 100px;
         margin-top: -60px;
-      
-        
-        margin-left: 25px;
+
+        text-align: center;
+        margin-left: 40px;
         padding: 8px;
         border-width: 1px;
         border-radius: 3px;
         border-color: #8D8D8D;
-        width: 1050px;
-        
+        width: 1000px;
+
         margin-top: -120px;
-        
-        
+
+
     }
 
- 
-    
-    
+
+
+
     .menupesquisamob img {
-    
+
         margin-left: 15px;
         width: 40px;
         height: 40px;
         max-width: 100%;
         margin-top: 35px;
     }
-    
+
     .menupesquisamob input {
-    
-        
+
+
         margin-left: 60px;
         border: none !important;
         max-width: 100%;
         margin-top: 10px;
         font-size: 40px;
-        
-    
+
+
     }
-    
 
-   .menu {
 
-       display: none;
+    .menu {
+
+        display: none;
+
+    }
+
+
+    .menu2 {
+
+        display: none;
+    }
+
+    .seta {}
+
+    .frete1 {
+
+        display: none;
+    }
+
+    .submenuseta {
+
+        background-color: black;
+        width: 1280px;
+        height: 150px;
+        margin-left: -290px;
+        margin-top: 25px;
+
+
+    }
+
+    .frete {
+        width: 1000px;
+    }
+
+    .submenu3 {
+
+        font-size: 32px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: #ffffff;
+        width: 600px;
+        height: 100px;
        
-   }
+        margin-left: 15px;
+        margin-top: 40px;
 
-   
-   .menu2 {
 
-    display: none;
+    }
+
+
+
+
+    .setaesquerda {
+
+        width: 0px;
+
+
+        font-size: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: #ffffff;
+        margin-top: 40px;
+        margin-left: 210px;
+
+    }
+
+    .setadireita {
+
+        width: 10px;
+
+        font-size: 70px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: #ffffff;
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+
+    .fotomobile {
+
+
+
+        display: table;
+        width: 100%;
+        height: 100%;
+        width: 1000px;
+        text-align: center;
+        margin-left: 50px;
+        margin-top: 180px;
+
+
+    }
+
+
+    .foto img {
+
+
+
+        display: none;
+
+
+    }
+
+    .fotomobile img {
+
+
+
+       
+        
+        width: 1000px;
+        text-align: center;
+
+        margin-top: -205px;
+
+
+    }
+
+
+    .semana {
+        display: none;
+
+
+
+    }
+
+    .setaesquerdamobi  {
+
+        width: 0px;
+
+
+        font-size: 55px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: #8D8D8D;
+        margin-top: 150px;
+        margin-left: 95px;
+      
+    }
+
+    .texto {
+
+        font-size: 45px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: black;
+        width: 600px;
+        height: 100px;
+        
+        margin-left: 270px;
+        margin-top: -50px;
+
+
+    }
+
+    .masc {
+        font-size: 45px ;
+        margin-left: 80px;
+    }
+
+
+    .setadireitamobi  {
+
+        width: 10px;
+
+        font-size: 55px;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        color: #8D8D8D;
+        margin-left: 965px;
+        margin-top: -110px;
+        
+    }
+
+
+.setamobi {
+    display: block;
 }
 
-.seta {
 
-    
-    
-}
-
-.frete1{
-
-    display: none;
-}
-
-.submenuseta{
-
-    background-color: black;
-    width: 1280px;
-    height: 160px;
-    margin-left: -290px;
-    margin-top: 15px;
-    
-
-}
-
-.frete{
-    width: 1000px;
-}
-.submenu3 {
-    
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    color: #ffffff;
-    width: 600px;
-    height: 100px;
-   
-    margin-left: 70px;
-    margin-top: 20px;
-    
-    
-}
-
-
-
-
-.setaesquerda  {
-
-    width: 0px;
-    
-    
-    font-size: 70px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    color:#ffffff;
-    margin-top: 40px;
-    margin-left: 200px;
-    
-}
-
-.setadireita {
-
-    width: 10px;
-    
-    font-size: 70px;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    color: #ffffff;
-    margin-left: -30px;
-    margin-top: 40px;
-}
-
-.fotomobile {
-
-    
-
-    display: table;
-  width: 100%;
-  height: 100%;
-  width: 1000px;
-  text-align: center;
-  margin-left: 50px;
-  margin-top: 180px;
-  
- 
- }
-
-
- .foto img{
-
-    
-
-    display: none;
- 
- 
- }
-
- .fotomobile img{
-
-    
-
-    display: table;
-  width: 100%;
-  height: 100%;
-  width: 1000px;
-  text-align: center;
-  
-  margin-top: 180px;
-  
- 
- }
- 
- 
- .semana {
-    display: none;
-    
-
-    
-}
- 
-    
-     
- 
- 
 
 
 }
-
-
