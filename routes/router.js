@@ -79,7 +79,7 @@ router.get('/logout', function (req, res, next) {
       if (err) {
         return next(err);
       } else {
-        return res.redirect('/home.html');
+        return res.redirect('/index.html');
       }
     });
   }
