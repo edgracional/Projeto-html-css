@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.: Autenticação :.</title>
+
+	<link rel="stylesheet" href="style3log.css"> 
+	
+	<style>
+		#konten{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			max-width: 960px;
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<h1>Autenticação de Clientes</h1>
+	<hr>
+	<div id="konten">
+
+		<div class="signup">
+			<div>
+				<h3>Registro</h3>
+				<div>
+					<form action="/" method="post">
+						<input type="text" name="email" placeholder="Email..." required="">
+						<br><br>
+						<input type="text" name="username" placeholder="Nome do usuário..." required="">
+						<br><br>
+						<input type="password" name="password" placeholder="Senha..." required="">
+						<br><br>
+						<input type="password" name="passwordConf" placeholder="Confirme Senha..." required="">
+						<br><br>
+						<input type="submit" value="Registre aqui!">
+						
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div class="login">
+			<div>
+				<h3>Login</h3>
+				<div>
+					<form action="/" method="post">
+						<input type="text" name="logemail" placeholder="Email..." required="">
+						<br><br>
+						<input type="password" name="logpassword" placeholder="Senha..." required="">
+						<br><br>
+						<input type="submit" value="Login ">
+						<div class="imgnike"><img src="nikemini.png" alt=""></div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div><br><hr>
+	
+</center>	
+
+
+
+</body>
+</html>
