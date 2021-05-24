@@ -3,6 +3,10 @@ var router = express.Router();
 var User = require('../models/user');
 
 router.get('/', function (req, res, next) {
+  return res.sendFile(path.join(__dirname + '/'));
+});
+
+router.get('/views/index1.html', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/views/index1.html'));
 });
 
