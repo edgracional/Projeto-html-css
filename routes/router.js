@@ -2,11 +2,17 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 
+// GET route for homepage
 router.get('/', function (req, res, next) {
+  return res.sendFile(path.join(__dirname + '/'));
+});
+
+
+router.get('/views/index1.html', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/views/index1.html'));
 });
 
-router.post('/', function (req, res, next) {
+router.post('/views/index1.html', function (req, res, next) {
   
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Password doesn\'t match!');
