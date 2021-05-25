@@ -4,23 +4,24 @@ var bodyParser = require('body-parser');
 
 
 
-
-var VerifyToken = require('../Auth/VerifyToken.js');
-
-router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.urlencoded({
+  extended: true
+}));
 router.use(bodyParser.json());
 var User = require('../models/user');
 
 /**
- * Configure JWT
+ * Configura JWT
  */
- var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
- var bcrypt = require('bcryptjs');
- var config = require('../config'); // get config file
+var jwt = require('jsonwebtoken');
+var bcrypt = require('bcryptjs');
+var config = require('../config');
 
- require("dotenv-safe").config();
+require("dotenv-safe").config();
 
- require('dotenv').config({path:'/.env'});
+require('dotenv').config({
+  path: '/.env'
+});
 
 router.get('/', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/'));
@@ -34,26 +35,33 @@ router.get('/views/index1.html', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/views/index1.html'));
 });
 
-router.post('/login', function(req, res) {
+router.post('/login', function (req, res) {
 
-  User.findOne({ email: req.body.logemail }, function (err, user) {
+  User.findOne({
+    email: req.body.logemail
+  }, function (err, user) {
     if (err) return res.status(500).send('Error on the server.');
     if (!user) return res.status(404).send('No user found.');
-    
+
     // check if the password is valid
     var passwordIsValid = bcrypt.compareSync(req.body.logpassword, user.password);
-    if (!passwordIsValid) return res.status(401).send({ auth: false, token: null });
+    if (!passwordIsValid) return res.status(401).send({
+      auth: false,
+      token: null
+    });
 
     // if user is found and password is valid
     // create a token
-    var token = jwt.sign({ id: user._id }, process.env.SECRET, {
+    var token = jwt.sign({
+      id: user._id
+    }, process.env.SECRET, {
       expiresIn: 86400 // expires in 24 hours
     });
-    
+
 
     // return the information including token as JSON
     req.session.userId = user._id;
-        return res.redirect('/profile');
+    return res.redirect('/profile');
   });
 
 });
@@ -61,7 +69,7 @@ router.post('/login', function(req, res) {
 
 
 router.post('/register', function (req, res, next) {
-  
+
   if (req.body.password !== req.body.passwordConf) {
     var err = new Error('Password doesn\'t match!');
     err.status = 400;
@@ -85,10 +93,12 @@ router.post('/register', function (req, res, next) {
       if (error) {
         return next(error);
       } else {
-        var token = jwt.sign({ id: user._id }, config.secret, {
+        var token = jwt.sign({
+          id: user._id
+        }, config.secret, {
           expiresIn: 86400 // expires in 24 hours
         });
-        
+
         req.session.userId = user._id;
         return res.redirect('/profile');
       }
@@ -101,10 +111,15 @@ router.post('/register', function (req, res, next) {
         err.status = 401;
         return next(err);
       } else {
-        var token = jwt.sign({ id: user._id }, config.secret, {
+        var token = jwt.sign({
+          id: user._id
+        }, config.secret, {
           expiresIn: 86400 // expires in 24 hours
         });
-        res.status(200).send({ auth: true, token: token });
+        res.status(200).send({
+          auth: true,
+          token: token
+        });
         req.session.userId = user._id;
         return res.redirect('/profile');
       }
@@ -142,7 +157,7 @@ router.use(function (user, req, res, next) {
 
 router.get('/logout', function (req, res, next) {
   if (req.session) {
-    
+
     req.session.destroy(function (err) {
       if (err) {
         return next(err);
