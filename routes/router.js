@@ -26,6 +26,10 @@ router.get('/', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/'));
 });
 
+router.get('/index2.html', function (req, res, next) {
+  return res.sendFile(path.join(__dirname + '/views/index2.html'));
+});
+
 router.get('/views/index1.html', function (req, res, next) {
   return res.sendFile(path.join(__dirname + '/views/index1.html'));
 });
