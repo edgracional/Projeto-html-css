@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-const http = require('http');
+
 var session = require('express-session');
 
 mongoose.set('useNewUrlParser', true);
@@ -47,6 +47,7 @@ app.use(express.static(__dirname + '/'));
 
 var routes = require('./routes/router');
 app.use('/', routes);
+app.use('/profile', routes);
 
 
 
