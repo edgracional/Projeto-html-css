@@ -2,14 +2,13 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+const http = require('http');
 var session = require('express-session');
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-
-
 
 
 
@@ -31,7 +30,7 @@ db.once('open', function(){});
 
 app.use(
     session({
-        secret: 'story book',
+        secret: 'supersecret',
         resave: false,
         saveUninitialized: false,
         store: MongoDbStore.create({
@@ -42,12 +41,14 @@ app.use(
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use(express.static(__dirname + '/'));
 
 var routes = require('./routes/router');
 app.use('/', routes);
+
+
 
 
 app.use(function (req, res, next) {
